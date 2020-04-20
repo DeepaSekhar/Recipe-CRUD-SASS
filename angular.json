@@ -49,7 +49,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -144,6 +144,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "RecepieCrud"
+    }
+  },
+  "defaultProject": "RecepieCrud",
+  "cli": {
+    "analytics": "bf7096ce-c738-4449-b51a-1b0121422935"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

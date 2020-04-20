@@ -1,0 +1,45 @@
+<form #recipeForm="ngForm" (ngSubmit)="saveRecipe()">
+  <div class="container">
+    <div class="title">
+      <h1>Add a new Recipe</h1>
+    </div>
+    <div class="recepie form-group">
+      <label for="name">Recipe Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="name"
+        name="name"
+      />
+    </div>
+    <div class="recepie form-group">
+      <label for="photo">Recipe photo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="photo"
+        required
+        [(ngModel)]="photo"
+        name="photo"
+      />
+    </div>
+    <div class="recepie form-group">
+      <label for="description">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        required
+        [(ngModel)]="description"
+        name="description"
+      />
+    </div>
+    <div>
+      <button type="submit">Save</button>
+    </div>
+  </div>
+</form>
+Angular generated Form Model:{{ recipeForm.value | json }} Angular generated
+Form Model:{{ recipeForm.valid }}
