@@ -1,15 +1,6 @@
 @import "../../../styles/responsive.mixins.scss";
 .container {
-  height: 350px;
-}
-.createForm-title {
-  font-size: 10px;
-  @include respond-to("md") {
-    font-size: 15px;
-  }
-  @include respond-to("lg") {
-    font-size: 20px;
-  }
+  height: 400px;
 }
 .card {
   padding: 10px;
@@ -23,9 +14,4 @@
   @include respond-to("lg") {
     width: 95%;
   }
-}
-.action-buttons {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
 }

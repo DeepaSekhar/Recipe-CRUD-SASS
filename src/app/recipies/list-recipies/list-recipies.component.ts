@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from 'src/models/recipe.model';
-import { RecipeService } from "../recipe.service"
-import { Router } from "@angular/router"
+import { RecipeService } from "../recipe.service";
+import { Router } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
+
 
 @Component({
 
@@ -13,16 +15,22 @@ export class ListRecipiesComponent implements OnInit {
   recipies: Recipe[];
   recipeList: Recipe[];
 
-  constructor(private recipeService: RecipeService) { }
+  constructor(private recipeService: RecipeService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
-    this.recipies = this.recipeService.getRecipe()
+    this.recipies = this.recipeService.getRecipes();
+  }
+  editRecipe(recipe: Recipe) {
+    console.log('/edit', recipe.id)
+    this.router.navigate(['/edit', recipe.id]);
+
   }
 
-  deleteRecipe() {
-    // let index = this.recipeList.indexOf(recipe);
-    // this.recipeList.splice(index, 1);
-    this.recipeService.deleteRecipe(this.recipe.id);
+  deleteRecipe(recipe: Recipe) {
+    console.log("recipie=", recipe.id);
+    this.recipeService.deleteRecipe(recipe.id);
   }
 }
 

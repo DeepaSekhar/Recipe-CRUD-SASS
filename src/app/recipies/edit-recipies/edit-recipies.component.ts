@@ -6,14 +6,13 @@ import { Router } from "@angular/router"
 import { ActivatedRoute } from "@angular/router"
 
 @Component({
-  selector: 'app-create-recipies',
-  templateUrl: './create-recipies.component.html',
-  styleUrls: ['./create-recipies.component.scss']
+  selector: 'app-edit-recipies',
+  templateUrl: './edit-recipies.component.html',
+  styleUrls: ['./edit-recipies.component.scss']
 })
-export class CreateRecipiesComponent implements OnInit {
+export class EditRecipiesComponent implements OnInit {
   createRecipe: Recipe
   recipe: Recipe
-
   id: number
   name: string
   photo: string
@@ -30,14 +29,14 @@ export class CreateRecipiesComponent implements OnInit {
       this.getRecipe(id);
     })
   }
-  getRecipe(id: number) {
+  getRecipe(id: number): void {
     console.log(id);
     if (id === 0) {
       this.recipe = {
         id: null,
         name: null,
         photo: null,
-        description: null
+        description: null,
       }
     }
     else {
@@ -55,3 +54,5 @@ export class CreateRecipiesComponent implements OnInit {
     this.router.navigate(['list'])
   }
 }
+
+

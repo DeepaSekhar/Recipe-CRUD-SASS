@@ -1,8 +1,8 @@
 <form #recipeForm="ngForm" (ngSubmit)="saveRecipe()">
   <div class="container">
     <div class="card">
-      <div class="createForm-title">
-        <h1>Add a new Recipe</h1>
+      <div class="title">
+        <h1>Edit Recipe</h1>
       </div>
       <div class="recepie form-group">
         <label class="label" for="name">Recipe Name</label>
@@ -11,7 +11,7 @@
           class="form-control input-field"
           id="name"
           required
-          [(ngModel)]="name"
+          [(ngModel)]="recipe.name"
           name="name"
         />
       </div>
@@ -22,7 +22,7 @@
           class="form-control input-field"
           id="photo"
           required
-          [(ngModel)]="photo"
+          [(ngModel)]="recipe.photo"
           name="photo"
         />
       </div>
@@ -33,7 +33,7 @@
           class="form-control input-field"
           id="description"
           required
-          [(ngModel)]="description"
+          [(ngModel)]="recipe.description"
           name="description"
         />
       </div>
@@ -43,5 +43,3 @@
     </div>
   </div>
 </form>
-Angular generated Form Model:{{ recipeForm.value | json }} Angular generated
-Form Model:{{ recipeForm.valid }}
