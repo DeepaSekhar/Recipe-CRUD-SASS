@@ -1,12 +1,3 @@
 .button-color {
   background-color: red;
 }
-@import "../../../styles/responsive.mixins.scss";
-.card-container {
-  @include respond-to("sm") {
-  }
-  @include respond-to("md") {
-  }
-  @include respond-to("lg") {
-  }
-}
