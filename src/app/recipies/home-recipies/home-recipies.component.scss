@@ -6,7 +6,7 @@
   justify-content: center;
 }
 .welcome-msg {
-  margin-top: 100px;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
 }
@@ -74,4 +74,5 @@
 .welcome-image {
   width: 70%;
   height: 300px;
+  border: 3px solid rgb(3, 49, 3);
 }

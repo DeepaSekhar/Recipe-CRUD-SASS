@@ -1,4 +1,5 @@
 @import "../../../styles/responsive.mixins.scss";
+
 .container {
   height: 350px;
 }
@@ -25,7 +26,8 @@
   }
 }
 .action-buttons {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
+  margin-top: 10px;
+}
+.desc-input {
+  margin-left: 35px;
 }

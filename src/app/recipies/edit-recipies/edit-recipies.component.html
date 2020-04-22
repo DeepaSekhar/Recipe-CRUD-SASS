@@ -1,7 +1,7 @@
 <form #recipeForm="ngForm" (ngSubmit)="saveRecipe()">
   <div class="container">
     <div class="card">
-      <div class="title">
+      <div class="edit-title">
         <h1>Edit Recipe</h1>
       </div>
       <div class="recepie form-group">
@@ -27,10 +27,10 @@
         />
       </div>
       <div class="recepie form-group">
-        <label class="label" for="description">Description</label>
+        <label class="label " for="description">Description</label>
         <input
           type="text"
-          class="form-control input-field"
+          class="form-control input-field desc-input"
           id="description"
           required
           [(ngModel)]="recipe.description"
