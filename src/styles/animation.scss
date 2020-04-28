@@ -1,0 +1,38 @@
+.animation {
+  animation: Welcome 1s infinite;
+}
+@keyframes Welcome {
+  0% {
+    color: rgb(228, 231, 35);
+  }
+  25% {
+    color: rgb(233, 18, 18);
+  }
+  50% {
+    color: rgb(14, 21, 119);
+  }
+  100% {
+    color: rgb(211, 39, 154);
+  }
+}
+.wiggle:hover {
+  animation: wiggle 1s ease;
+  animation-iteration-count: 5;
+}
+@keyframes wiggle {
+  20% {
+    transform: translateX(4px);
+  }
+  40% {
+    transform: translateX(-4px);
+  }
+  60% {
+    transform: translateX(2px);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

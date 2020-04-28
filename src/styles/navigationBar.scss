@@ -1,0 +1,39 @@
+.nav {
+  width: 100%;
+  display: flex;
+  background: green;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 50px;
+  @include respond-to("sm") {
+    height: 55px;
+  }
+  @include respond-to("md") {
+    height: 60px;
+  }
+  @include respond-to("lg") {
+    height: 65px;
+  }
+
+  .list {
+    list-style-type: none;
+    margin: 10px;
+  }
+
+  .link {
+    text-decoration: none;
+    font-size: 20px;
+    flex-direction: column;
+    color: black;
+
+    @include respond-to("sm") {
+      font-size: 25px;
+    }
+    @include respond-to("md") {
+      font-size: 30px;
+    }
+    @include respond-to("lg") {
+      font-size: 35px;
+    }
+  }
+}

@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   { path: "list", component: ListRecipiesComponent },
   { path: "create", component: CreateRecipiesComponent },
   { path: "edit/:id", component: EditRecipiesComponent },
-  { path: "", redirectTo: '/list', pathMatch: "full" }
+  { path: "", redirectTo: '/home', pathMatch: "full" }
 ]
 @NgModule({
   declarations: [

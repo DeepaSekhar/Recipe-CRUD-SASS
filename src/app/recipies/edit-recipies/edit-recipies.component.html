@@ -1,4 +1,4 @@
-<form #recipeForm="ngForm" (ngSubmit)="saveRecipe()">
+<form #recipeForm="ngForm" (ngSubmit)="editRecipe()">
   <div class="container">
     <div class="card">
       <div class="edit-title">
@@ -39,6 +39,7 @@
       </div>
       <div class="action-buttons">
         <button class="action-button" type="submit">Save</button>
+        <button class="action-button btn-back" type="submit">Back</button>
       </div>
     </div>
   </div>

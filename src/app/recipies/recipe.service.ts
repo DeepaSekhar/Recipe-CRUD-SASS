@@ -35,25 +35,39 @@ export class RecipeService {
 
 
     ]
-    getRecipes(): Recipe[] {
+    getAllRecipes(): Recipe[] {
         return this.listRecipes
 
     }
-    getRecipe(id: number): Recipe {
+    getRecipeById(id: number): Recipe {
         return this.listRecipes.find(recipe => recipe.id === id);
+
+    }
+    updateRecipe(recipe: Recipe) {
+        //find the id in the list
+        //replace it with new recipe
+        // const index = this.listRecipes.findIndex(recp => recp.id === recipe.id);
+        console.log("recipe", recipe);
+        const editedRecipie = {
+            ...recipe
+        }
+
+        this.listRecipes.push(editedRecipie);
 
     }
 
     save(recipe: Recipe) {
+
         const dish = {
             ...recipe,
             id: this.listRecipes.length + 1
 
         }
         this.listRecipes.push(dish)
-        console.log("listemployees.find", this.listRecipes)
+        console.log("listrecipie.find", this.listRecipes)
     }
     deleteRecipe(id: number) {
+        console.log("hoooooi");
         const i = this.listRecipes.findIndex(e => e.id === id);
         {
             if (i != -1) {

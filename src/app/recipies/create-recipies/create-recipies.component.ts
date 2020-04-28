@@ -31,7 +31,7 @@ export class CreateRecipiesComponent implements OnInit {
     })
   }
   getRecipe(id: number) {
-    console.log(id);
+    console.log("id");
     if (id === 0) {
       this.recipe = {
         id: null,
@@ -41,10 +41,11 @@ export class CreateRecipiesComponent implements OnInit {
       }
     }
     else {
-      this.recipe = this.recipeService.getRecipe(id);
+      this.recipe = this.recipeService.getRecipeById(id);
     }
   }
   saveRecipe(): void {
+
     this.createRecipe = {
       id: this.id,
       name: this.name,

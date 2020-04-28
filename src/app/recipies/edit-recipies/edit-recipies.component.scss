@@ -1,23 +1,14 @@
 @import "../../../styles/responsive.mixins.scss";
 .container {
-  height: 400px;
+  height: 300px;
 }
 .card {
-  padding: 10px;
-  @include respond-to("sm") {
-    width: 95%;
-    height: 300px;
-  }
-  @include respond-to("md") {
-    width: 95%;
-  }
-  @include respond-to("lg") {
-    width: 95%;
-  }
-}
-.action-buttons {
-  margin-top: 10px;
+  align-items: center;
+  width: 100%;
 }
 .desc-input {
   margin-left: 40px;
+}
+.btn-back {
+  background-color: goldenrod;
 }

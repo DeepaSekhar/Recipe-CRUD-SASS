@@ -20,7 +20,8 @@ export class ListRecipiesComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.recipies = this.recipeService.getRecipes();
+    this.recipies = this.recipeService.getAllRecipes();
+    console.log("ngOn It", this.recipies)
   }
   editRecipe(recipe: Recipe) {
     console.log('/edit', recipe.id)

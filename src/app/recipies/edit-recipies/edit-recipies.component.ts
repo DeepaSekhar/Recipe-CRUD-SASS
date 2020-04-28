@@ -11,12 +11,8 @@ import { ActivatedRoute } from "@angular/router"
   styleUrls: ['./edit-recipies.component.scss']
 })
 export class EditRecipiesComponent implements OnInit {
-  createRecipe: Recipe
+  editedRecipe: Recipe;
   recipe: Recipe
-  id: number
-  name: string
-  photo: string
-  description: string
   constructor(private recipeService: RecipeService,
     private router: Router,
     private route: ActivatedRoute) {
@@ -31,26 +27,9 @@ export class EditRecipiesComponent implements OnInit {
   }
   getRecipe(id: number): void {
     console.log(id);
-    if (id === 0) {
-      this.recipe = {
-        id: null,
-        name: null,
-        photo: null,
-        description: null,
-      }
-    }
-    else {
-      this.recipe = this.recipeService.getRecipe(id);
-    }
+    this.recipe = this.recipeService.getRecipeById(id);
   }
-  saveRecipe(): void {
-    this.createRecipe = {
-      id: this.id,
-      name: this.name,
-      photo: this.photo,
-      description: this.description
-    }
-    this.recipeService.save(this.createRecipe)
+  editRecipe(): void {
     this.router.navigate(['list'])
   }
 }
